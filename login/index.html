@@ -113,7 +113,6 @@
         .social .kanan {
             background: #db4437;
         }
-        /* Style Alert bawaan LKPD */
         .alert {
             background: #e44e4e;
             color: white;
@@ -128,7 +127,7 @@
 <body>
 
     <div class="login-box">
-        <!-- Struktur Form wajib memiliki ID ini agar dibaca file login.js milikmu -->
+        <!-- ID form, username, password, dan alertBox ini wajib pas dengan login.js kamu -->
         <form id="loginForm">
             <h3>Silahkan Login</h3>
             
@@ -151,12 +150,12 @@
             
             <button type="button" class="btn-home" onclick="location.href='../index.html';">Home</button>
             
-            <!-- Elemen ini wajib ada untuk memunculkan pesan gagal login dari file JS -->
+            <!-- Tempat memunculkan pesan error bawaan login.js sekolah -->
             <div id="alertBox" class="alert" style="display:none;"></div>
         </form>
     </div>
 
-    <!-- Memanggil script login.js asli milikmu yang ada di folder js -->
+    <!-- Memanggil file login.js asli milikmu -->
     <script src="js/login.js"></script>
 </body>
 </html>
