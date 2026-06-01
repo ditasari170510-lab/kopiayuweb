@@ -98,7 +98,6 @@
         .social .kanan {
             background: #db4437;
         }
-        /* Style pesan error register sesuai LKPD */
         #message {
             background: #ff4e4e;
             color: white;
@@ -113,7 +112,7 @@
 <body>
 
     <div class="register-box">
-        <!-- Struktur Form wajib memiliki ID ini agar dibaca file register.js milikmu -->
+        <!-- ID form, username, email, password, dan message wajib pas dengan register.js kamu -->
         <form id="registerForm">
             <h3>Register</h3>
             
@@ -139,12 +138,12 @@
                 <div class="kanan">G Google</div>
             </div>
 
-            <!-- Elemen p wajib ada untuk memunculkan pesan gagal daftar dari file register.js -->
+            <!-- Tempat memunculkan pesan dari register.js sekolah -->
             <p id="message" style="display:none;"></p>
         </form>
     </div>
 
-    <!-- Memanggil script register.js asli milikmu yang ada di folder js -->
+    <!-- Memanggil file register.js asli milikmu -->
     <script src="js/register.js" defer></script>
 </body>
 </html>
