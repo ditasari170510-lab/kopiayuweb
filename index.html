@@ -49,7 +49,7 @@ Bootstrap 5 HTML CSS Template
                 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 transition: 0.3s;
             }
-            #authArea button:hover {
+            # button:hover {
                 background-color: #a46639 !important;
             }
         </style>
@@ -102,9 +102,9 @@ Bootstrap 5 HTML CSS Template
                                 <i class="bi-arrow-up-right ms-2"></i>
                             </a>
 
-                            <!-- Tempat Munculnya Tombol Login / Logout -->
+                           <!-- Tempat memunculkan Tombol LOGIN / LOGOUT otomatis dari welcome.js -->
                             <div id="authArea">
-                                <button onclick="window.location.href='login/index.html'" class="btn" style="background-color: #bc7c4c; color: #ffffff; padding: 12px 24px; border-radius: 100px; font-weight: bold; border: none; cursor: pointer; display: inline-block;">
+                                <button onclick="goLogin()" class="btn custom-btn">
                                     Login
                                 </button>
                             </div>
