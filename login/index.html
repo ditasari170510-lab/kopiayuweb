@@ -31,7 +31,6 @@
             font-weight: 600;
         }
         .input-group {
-            position: relative;
             margin-bottom: 25px;
             text-align: left;
         }
@@ -41,11 +40,12 @@
             font-weight: 600;
             display: block;
             margin-bottom: 8px;
+            pointer-events: none; /* Supaya klik-an langsung tembus ke kotak input */
         }
         .input-group input {
             width: 100%;
-            padding: 10px 0;
-            background: transparent;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
             border: none;
             border-bottom: 2px solid #555;
             outline: none;
@@ -53,9 +53,11 @@
             font-size: 1rem;
             box-sizing: border-box;
             transition: 0.3s;
+            border-radius: 4px;
         }
         .input-group input:focus {
             border-bottom-color: #bc7c4c;
+            background: rgba(255, 255, 255, 0.1);
         }
         button[type="submit"] {
             background: #bc7c4c;
@@ -109,6 +111,8 @@
         .social .go a {
             color: #fff;
             text-decoration: none;
+            display: block;
+            width: 100%;
         }
         .social .kanan {
             background: #db4437;
@@ -121,23 +125,25 @@
             border: 1px solid #b32929;
             margin-top: 15px;
             border-radius: 5px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <div class="login-box">
-        <!-- ID form, username, password, dan alertBox ini wajib pas dengan login.js kamu -->
+        <!-- Form ID, input ID, dan alertBox pas dengan berkas login.js sekolah -->
         <form id="loginForm">
             <h3>Silahkan Login</h3>
             
             <div class="input-group">
                 <label for="username">Nama Pengguna</label>
-                <input type="text" id="username" placeholder="Nama Pengguna .." required>
+                <input type="text" id="username" placeholder="Nama Pengguna .." required autocomplete="off">
             </div>
             
             <div class="input-group">
                 <label for="password">Password</label>
+                <!-- Ditambahkan type="password" yang bersih agar bisa diklik lancar -->
                 <input type="password" id="password" placeholder="Password .." required>
             </div>
             
@@ -150,12 +156,12 @@
             
             <button type="button" class="btn-home" onclick="location.href='../index.html';">Home</button>
             
-            <!-- Tempat memunculkan pesan error bawaan login.js sekolah -->
+            <!-- Tempat memunculkan pesan error login bawaan berkas JS sekolah -->
             <div id="alertBox" class="alert" style="display:none;"></div>
         </form>
     </div>
 
-    <!-- Memanggil file login.js asli milikmu -->
+    <!-- Memanggil script login.js bawaan dari sekolah -->
     <script src="js/login.js"></script>
 </body>
 </html>
