@@ -45,7 +45,7 @@ Bootstrap 5 HTML CSS Template
         <main>
             <nav class="navbar navbar-expand-lg">                
                 <div class="container">
-                    <!-- PERBAIKAN LOGO: Sudah rapi dan tidak menumpuk lagi -->
+                    <!-- LOGO AMAN & RAPI -->
                     <a class="navbar-brand d-flex align-items-center" href="index.html">
                         <img src="images/coffee-bean.png" class="navbar-brand-image img-fluid" alt="Kopi Ayu">
                         <span>Kopi Ayu</span>
@@ -56,6 +56,7 @@ Bootstrap 5 HTML CSS Template
                     </button>
     
                     <div class="collapse navbar-collapse" id="navbarNav">
+                        <!-- BARISAN MENU BERSIH (Teks Halo User Sudah Dihapus dari Sini) -->
                         <ul class="navbar-nav ms-lg-auto">
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_1">Beranda</a>
@@ -76,14 +77,9 @@ Bootstrap 5 HTML CSS Template
                             <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_5">Kontak</a>
                             </li>
-
-                            <!-- Tempat Nama User Aktif -->
-                            <li class="nav-item">
-                                <span id="userInfo" class="nav-link"></span>
-                            </li>
                         </ul>
 
-                        <!-- PERBAIKAN TOMBOL LOGIN & RESERVASI -->
+                        <!-- TOMBOL RESERVASI & AREA TOMBOL AUTH -->
                         <div class="ms-lg-3 d-flex align-items-center" style="gap: 12px; position: relative; z-index: 999;">
                             <!-- Tombol Reservasi -->
                             <a class="btn custom-btn custom-border-btn" href="reservation.html">
@@ -91,7 +87,7 @@ Bootstrap 5 HTML CSS Template
                                 <i class="bi-arrow-up-right ms-2"></i>
                             </a>
 
-                            <!-- Tombol Login (Diberi background kontras agar langsung terlihat & bisa diklik) -->
+                            <!-- Tempat Munculnya Tombol Login / Logout -->
                             <div id="authArea">
                                 <button onclick="window.location.href='login/index.html'" class="btn" style="background-color: #bc7c4c; color: #ffffff; padding: 12px 24px; border-radius: 100px; font-weight: bold; border: none; cursor: pointer; display: inline-block;">
                                     Login
@@ -102,7 +98,6 @@ Bootstrap 5 HTML CSS Template
                     </div>
                 </div>
             </nav>
-
 
             <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
