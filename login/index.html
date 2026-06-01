@@ -57,7 +57,7 @@
         .input-group input:focus {
             border-bottom-color: #bc7c4c;
         }
-        button {
+        button[type="submit"] {
             background: #bc7c4c;
             border: none;
             outline: none;
@@ -72,13 +72,19 @@
             transition: 0.3s;
             margin-top: 10px;
         }
-        button:hover {
+        button[type="submit"]:hover {
             background: #a46639;
         }
         .btn-home {
             background: transparent;
             border: 2px solid #fff;
             margin-top: 15px;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
         }
         .btn-home:hover {
             background: #fff;
@@ -107,6 +113,7 @@
         .social .kanan {
             background: #db4437;
         }
+        /* Style Alert bawaan LKPD */
         .alert {
             background: #e44e4e;
             color: white;
@@ -121,7 +128,7 @@
 <body>
 
     <div class="login-box">
-        <!-- Pastikan ID form dan input ini sama persis dengan instruksi LKPD -->
+        <!-- Struktur Form wajib memiliki ID ini agar dibaca file login.js milikmu -->
         <form id="loginForm">
             <h3>Silahkan Login</h3>
             
@@ -144,12 +151,12 @@
             
             <button type="button" class="btn-home" onclick="location.href='../index.html';">Home</button>
             
-            <!-- Tempat memunculkan pesan error jika login gagal -->
+            <!-- Elemen ini wajib ada untuk memunculkan pesan gagal login dari file JS -->
             <div id="alertBox" class="alert" style="display:none;"></div>
         </form>
     </div>
 
-    <!-- Script JavaScript API sesuai instruksi LKPD -->
+    <!-- Memanggil script login.js asli milikmu yang ada di folder js -->
     <script src="js/login.js"></script>
 </body>
 </html>
