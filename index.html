@@ -29,13 +29,28 @@ https://www.tooplate.com/view/2137-barista-cafe
 Bootstrap 5 HTML CSS Template
 -->
    <style>
-            #userInfo {
-                font-weight: bold;
-                color: #bc7c4c !important;
-                margin-left: 15px;
-            }
             .navbar {
-                z-index: 9999 !important; /* Memastikan seluruh navbar berada di paling depan agar bisa diklik */
+                z-index: 9999 !important;
+            }
+            /* Trik CSS untuk menyembunyikan element tulisan "Halo, heri" agar tidak mengacaukan layout */
+            #navbarNav .nav-item span#userInfo {
+                display: none !important;
+            }
+            /* Trik CSS untuk mengubah tombol Logout bawaan sekolah menjadi estetik cokelat seperti tombol Login */
+            #authArea button {
+                background-color: #bc7c4c !important;
+                color: #ffffff !important;
+                padding: 12px 24px !important;
+                border-radius: 100px !important;
+                font-weight: bold !important;
+                border: none !important;
+                cursor: pointer !important;
+                display: inline-block !important;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transition: 0.3s;
+            }
+            #authArea button:hover {
+                background-color: #a46639 !important;
             }
         </style>
     </head>
