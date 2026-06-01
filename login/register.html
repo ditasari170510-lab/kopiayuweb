@@ -57,7 +57,7 @@
         .input-group input:focus {
             border-bottom-color: #bc7c4c;
         }
-        button {
+        button[type="submit"] {
             background: #bc7c4c;
             border: none;
             outline: none;
@@ -72,7 +72,7 @@
             transition: 0.3s;
             margin-top: 10px;
         }
-        button:hover {
+        button[type="submit"]:hover {
             background: #a46639;
         }
         .social {
@@ -98,7 +98,8 @@
         .social .kanan {
             background: #db4437;
         }
-        .message-error {
+        /* Style pesan error register sesuai LKPD */
+        #message {
             background: #ff4e4e;
             color: white;
             padding: 10px;
@@ -112,7 +113,7 @@
 <body>
 
     <div class="register-box">
-        <!-- Pastikan ID form dan input ini sesuai dengan registerForm LKPD -->
+        <!-- Struktur Form wajib memiliki ID ini agar dibaca file register.js milikmu -->
         <form id="registerForm">
             <h3>Register</h3>
             
@@ -138,12 +139,12 @@
                 <div class="kanan">G Google</div>
             </div>
 
-            <!-- Tempat pesan error registrasi -->
-            <p id="message" style="display:none;" class="message-error"></p>
+            <!-- Elemen p wajib ada untuk memunculkan pesan gagal daftar dari file register.js -->
+            <p id="message" style="display:none;"></p>
         </form>
     </div>
 
-    <!-- Script JS Register sesuai instruksi LKPD -->
+    <!-- Memanggil script register.js asli milikmu yang ada di folder js -->
     <script src="js/register.js" defer></script>
 </body>
 </html>
