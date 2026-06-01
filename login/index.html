@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Ayu - Silahkan Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135px, #2c1a11, #4a3225);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            width: 320px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        h3 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .input-group label {
+            color: #bc7c4c;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #555;
+            outline: none;
+            color: #fff;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+        .input-group input:focus {
+            border-bottom-color: #bc7c4c;
+        }
+        button {
+            background: #bc7c4c;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #a46639;
+        }
+        .btn-home {
+            background: transparent;
+            border: 2px solid #fff;
+            margin-top: 15px;
+        }
+        .btn-home:hover {
+            background: #fff;
+            color: #2c1a11;
+        }
+        .social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .social div {
+            width: 45%;
+            padding: 8px 0;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        .social .go {
+            background: #444;
+        }
+        .social .go a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .social .kanan {
+            background: #db4437;
+        }
+        .alert {
+            background: #e44e4e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #b32929;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <!-- Pastikan ID form dan input ini sama persis dengan instruksi LKPD -->
+        <form id="loginForm">
+            <h3>Silahkan Login</h3>
+            
+            <div class="input-group">
+                <label for="username">Nama Pengguna</label>
+                <input type="text" id="username" placeholder="Nama Pengguna .." required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password .." required>
+            </div>
+            
+            <button type="submit">masuk</button>
+            
+            <div class="social">
+                <div class="go"><a href="register.html">DAFTAR</a></div>
+                <div class="kanan">G Google</div>
+            </div>
+            
+            <button type="button" class="btn-home" onclick="location.href='../index.html';">Home</button>
+            
+            <!-- Tempat memunculkan pesan error jika login gagal -->
+            <div id="alertBox" class="alert" style="display:none;"></div>
+        </form>
+    </div>
+
+    <!-- Script JavaScript API sesuai instruksi LKPD -->
+    <script src="js/login.js"></script>
+</body>
+</html>
