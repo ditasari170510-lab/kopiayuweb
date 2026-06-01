@@ -32,12 +32,14 @@ Bootstrap 5 HTML CSS Template
             .navbar {
                 z-index: 9999 !important;
             }
-            /* Trik CSS untuk menyembunyikan element tulisan "Halo, heri" agar tidak mengacaukan layout */
+            /* Menyembunyikan sapaan teks agar menu tidak berantakan */
             #navbarNav .nav-item span#userInfo {
                 display: none !important;
             }
-            /* Trik CSS untuk mengubah tombol Logout bawaan sekolah menjadi estetik cokelat seperti tombol Login */
-            #authArea button {
+            /* SIHIR CSS: Mengubah tombol Login MAUPUN tombol Logout bawaan sekolah menjadi estetik */
+            #authArea button, 
+            #authArea input[type="button"], 
+            #authArea input[type="submit"] {
                 background-color: #bc7c4c !important;
                 color: #ffffff !important;
                 padding: 12px 24px !important;
@@ -46,10 +48,11 @@ Bootstrap 5 HTML CSS Template
                 border: none !important;
                 cursor: pointer !important;
                 display: inline-block !important;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                transition: 0.3s;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+                transition: 0.3s !important;
             }
-            # button:hover {
+            #authArea button:hover, 
+            #authArea input[type="button"]:hover {
                 background-color: #a46639 !important;
             }
         </style>
