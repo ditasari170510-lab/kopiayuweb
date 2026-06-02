@@ -898,7 +898,8 @@ strong {
   CUSTOM FORM               
 -----------------------------------------*/
 .custom-form .form-control {
-  color: var(--p-color);
+  color: var(--white-color); /* Ubah dari var(--p-color) menjadi var(--white-color) */
+  background-color: transparent; /* Pastikan background transparan agar terlihat kontras dengan latar belakang cokelat */
   border-radius: var(--border-radius-small);
   margin-bottom: 30px;
   padding-top: 13px;
