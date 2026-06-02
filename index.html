@@ -505,120 +505,69 @@ Bootstrap 5 HTML CSS Template
                             <h2 class="text-white mb-4 pb-lg-2">Kontak</h2>
                         </div>
 
-                        <div class="col-lg-6 col-12">
-                            <form action="#" method="post" class="custom-form contact-form" role="form">
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nama Anda" required="">
-                                    </div>
+                        <!-- Bagian Form yang sudah diedit -->
+<div class="col-lg-6 col-12">
+    <!-- Tambahkan ID 'contact-form' agar bisa dikenali oleh JavaScript -->
+    <form action="#" method="post" id="contact-form" class="custom-form contact-form" role="form">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Nama Anda" required="">
+            </div>
 
-                                    <div class="col-lg-6 col-12">
-                                        <label for="email" class="form-label">Alamat Email</label>
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="email@gmail.com" required="">
-                                    </div>
+            <div class="col-lg-6 col-12">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="email@gmail.com" required="">
+            </div>
 
-                                    <div class="col-12">
-                                        <label for="message" class="form-label">Ada yang bisa kami bantu?</label>
-                                        <textarea name="message" rows="4" class="form-control" id="message" placeholder="Pesan Anda" required=""></textarea>
-                                    </div>
-                                </div>
+            <div class="col-12">
+                <label for="message" class="form-label">Ada yang bisa kami bantu?</label>
+                <textarea name="message" rows="4" class="form-control" id="message" placeholder="Pesan Anda" required=""></textarea>
+            </div>
+        </div>
 
-                                <div class="col-lg-5 col-12 mx-auto mt-3">
-                                    <button type="submit" class="form-control">Kirim Pesan</button>
-                                </div>
-                            </form>
-                        </div>
+        <div class="col-lg-5 col-12 mx-auto mt-3">
+            <button type="submit" class="form-control">Kirim Pesan</button>
+        </div>
+    </form>
 
-                        <div class="col-lg-6 col-12 mx-auto mt-5 mt-lg-0 ps-lg-5">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.11237252135965!2d110.3950504290381!3d-7.800518952389401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57669d43fe55%3A0x75fae1bb400d4da5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sid!2sid!4v1780383124502!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
-                        </div>
+    <!-- PESAN KONFIRMASI (Awalnya tersembunyi/display: none) -->
+    <div id="success-message" style="display: none; color: white; margin-top: 20px; font-weight: bold; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; text-align: center;">
+        Pesan Anda sudah terkirim, terimakasih telah menghubungi kami.
+    </div>
+</div>
 
-                    </div>
-                </div>
-            </section>
+<!-- ... (kode lainnya tetap sama) ... -->
 
+<!-- JAVASCRIPT FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/vegas.min.js"></script>
+<script src="js/custom.js"></script>
 
-            <footer class="site-footer">
-                <div class="container">
-                    <div class="row">
+<!-- SCRIPT TAMBAHAN UNTUK PESAN KONFIRMASI -->
+<script>
+    const form = document.getElementById('contact-form');
+    const message = document.getElementById('success-message');
 
-                        <div class="col-lg-4 col-12 me-auto">
-                            <em class="text-white d-block mb-4">Lokasi Kami</em>
-                            <strong class="text-white">
-                                <i class="bi-geo-alt me-2"></i>
-                                Jl. Sidobali, Muja-Muju, Kota Yogyakarta.
-                            </strong>
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah reload halaman
+        
+        // Tampilkan pesan
+        message.style.display = 'block';
+        
+        // Reset isi form
+        form.reset();
+        
+        // Hilangkan pesan setelah 5 detik
+        setTimeout(function() {
+            message.style.display = 'none';
+        }, 5000);
+    });
+</script>
 
-                            <ul class="social-icon mt-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
-                            <em class="text-white d-block mb-4">Hubungi Kami</em>
-                            <p class="text-white mb-1">
-                                <a href="tel:088765409809" class="site-footer-link">088765409809</a>
-                            </p>
-                            <p class="text-white">
-                                <a href="mailto:kopiayu2026@gmail.com" class="site-footer-link">
-                                    kopiayu2026@gmail.com
-                                </a>
-                            </p>
-                        </div>
-
-                        <div class="col-lg-5 col-12">
-                            <em class="text-white d-block mb-4">Jam Operasional.</em>
-
-                            <ul class="opening-hours-list">
-                                <li class="d-flex">
-                                    Senin - Jumat
-                                    <span class="underline"></span>
-                                    <strong>9:00 - 18:00</strong>
-                                </li>
-
-                                <li class="d-flex">
-                                    Sabtu
-                                    <span class="underline"></span>
-                                    <strong>11:00 - 16:30</strong>
-                                </li>
-
-                                <li class="d-flex">
-                                    Minggu
-                                    <span class="underline"></span>
-                                    <strong>Tutup</strong>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-8 col-12 mt-4">
-                            <p class="copyright-text mb-0">Copyright © Kopi Ayu 2026 
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </main>
-
-        <!-- JAVASCRIPT FILES TEMPLATE ASLI -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/vegas.min.js"></script>
-        <script src="js/custom.js"></script>
-
-        <!-- Script Welcome LKPD harus diletakkan di paling bawah -->
-        <script src="login/js/welcome.js"></script>
-
-    </body>
-</html>
-    </body>
+<script src="login/js/welcome.js"></script>
+</body>
 </html>
