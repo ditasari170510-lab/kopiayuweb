@@ -514,39 +514,43 @@ Bootstrap 5 HTML CSS Template
                             <h2 class="text-white mb-4 pb-lg-2">Kontak</h2>
                         </div>
 
-                        <!-- Bagian Form yang sudah diedit -->
+                        <!-- KOLOM KIRI: Form Pesan -->
 <div class="col-lg-6 col-12">
-    <!-- Tambahkan ID 'contact-form' agar bisa dikenali oleh JavaScript -->
     <form action="#" method="post" id="contact-form" class="custom-form contact-form" role="form">
         <div class="row">
-    <div class="col-lg-6 col-12">
-        <form action="#" method="post" id="contact-form" class="custom-form contact-form" role="form">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Nama Anda" required="">
-                </div>
-                <div class="col-lg-6 col-12">
-                    <label for="email" class="form-label">Alamat Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="email@gmail.com" required="">
-                </div>
-                <div class="col-12">
-                    <label for="message" class="form-label">Ada yang bisa kami bantu?</label>
-                    <textarea name="message" rows="4" class="form-control" id="message" placeholder="Pesan Anda" required=""></textarea>
-                </div>
+            <div class="col-lg-6 col-12">
+                <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Nama Anda" required="">
             </div>
-            <div class="col-lg-5 col-12 mx-auto mt-3">
-                <button type="submit" class="form-control">Kirim Pesan</button>
+            <div class="col-lg-6 col-12">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="email@gmail.com" required="">
             </div>
-        </form>
-        <div id="success-message" style="display: none; color: white; margin-top: 20px; font-weight: bold;">
-            Pesan Anda sudah terkirim, terimakasih telah menghubungi kami.
+            <div class="col-12">
+                <label for="message" class="form-label">Ada yang bisa kami bantu?</label>
+                <textarea name="message" rows="4" class="form-control" id="message" placeholder="Pesan Anda" required=""></textarea>
+            </div>
         </div>
+        <div class="col-lg-5 col-12 mx-auto mt-3">
+            <button type="submit" class="form-control">Kirim Pesan</button>
+        </div>
+    </form>
+    
+    <!-- Pesan Konfirmasi -->
+    <div id="success-message" style="display: none; color: white; margin-top: 20px; font-weight: bold;">
+        Pesan Anda sudah terkirim, terimakasih telah menghubungi kami.
     </div>
+</div>
 
-    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.11237252135965!2d110.3950504290381!3d-7.800518952389401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57669d43fe55%3A0x75fae1bb400d4da5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sid!2sid!4v1780383124502!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+<!-- KOLOM KANAN: Google Maps -->
+<div class="col-lg-6 col-12 mt-5 mt-lg-0">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.11237252135965!2d110.3950504290381!3d-7.800518952389401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57669d43fe55%3A0x75fae1bb400d4da5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sid!2sid!4v1780383124502!5m2!1sid!2sid" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 20px;" 
+            allowfullscreen="" 
+            loading="lazy">
+    </iframe>
 </div>
 
         </section>
